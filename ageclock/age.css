@@ -1,0 +1,128 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #F5F6F7;
+    margin: 0;
+    font-family: 'Times New Roman', monospace;
+}
+
+.title {
+    text-align: center;
+    font-size: 32px;
+    color: #a3148e; /* Navy blue text */
+    margin-bottom: 500px;
+    font-family: 'serif;';
+    Text-font: "Cursive";
+    justify-content: center;
+    align-items: center;
+    left: 150px;
+    position: relative;
+    font-weight: bold; /* Ensure the text is bold */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+    letter-spacing: 1px;
+
+}
+
+.age-clock {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 40px;
+    margin-top: 350px;
+    background-color: #F5F6F7;
+    position: relative;
+    right: 90px;
+
+}
+
+.age-unit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 80px;
+    border: 2px solid #000080; /* Green border */
+    background-color: #fffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+}
+
+.label {
+    font-size: 16px;
+    color: #008000; /* Green text for labels */
+    margin-bottom: 5px;
+}
+
+.value {
+    font-size: 30px;
+    color: #000080; /* Navy blue text for numbers */
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Webkit browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+    width: 12px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: #f5f6f7; /* Background color of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color:#d10873 ; /* Green scrollbar */
+    border-radius: 6px; /* Rounded corners on the scrollbar */
+    border: 2px solid #f5f6f7; /* Adds padding and creates an illusion of a thinner scrollbar */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: ; /* Darker green on hover */
+}
+
+/* Firefox scrollbar (using scrollbar-width property) */
+body {
+    scrollbar-width: thin; /* Makes the scrollbar thin */
+    scrollbar-color: #d10873 #f5f6f7; /* Color of scrollbar (thumb and track) */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

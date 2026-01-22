@@ -1,0 +1,220 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background: #F5F6F7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding-top: 50px;
+}
+
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 350px;
+    margin-top: 410px; /* Added margin to push it down */
+     font-family: 'Times New Roman', serif;
+}
+
+/* Adjusting the headline position */
+h2 {
+    color: navy;
+    margin-bottom: 20px;
+    margin-top: 50px; /* Added margin to prevent it from being too high */
+    font-family: 'Nyala', sans-serif; /* Modern and clean font */
+    font-size: 28px; /* Adjusted size */
+    font-weight: bold; /* Make it stand out */
+    
+}
+
+/* Calculator Section */
+.calculator {
+    background: #eef;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+/* Input Fields */
+input {
+    width: 90%;
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Button */
+button {
+    background: green;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: darkgreen;
+}
+
+/* Result Text */
+.result {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+
+
+
+
+
+/* Responsive adjustments for mobile */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 90%; /* Make it more flexible for smaller screens */
+        margin-top: 420px; /* Increase top margin for better visibility */
+        
+    }
+
+    h2 {
+        font-size: 32px; /* Slightly reduce font size for mobile */
+        margin-top: 30px; /* Adjust for better positioning */
+    }
+
+    body {
+        padding-top: 80px; /* More space at the top on smaller screens */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px; /* Width of the scrollbar */
+}
+
+/* Scrollbar Track */
+::-webkit-scrollbar-track {
+    background: #ffe6f2; /* Light pink background */
+    border-radius: 10px; /* Rounded corners */
+}
+
+/* Scrollbar Handle */
+::-webkit-scrollbar-thumb {
+    background: #ff66b2; /* Bright pink */
+    border-radius: 10px; /* Rounded scrollbar */
+}
+
+/* Scrollbar Handle on Hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #ff3385; /* Darker pink on hover */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.gpa-calculator {
+    background: #F5F6F7;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.gpa-calculator h2 {
+    color: navy;
+}
+
+#gpaTable {
+    width: 100%;
+    margin: 10px auto;
+    border-collapse: collapse;
+}
+
+#gpaTable th, #gpaTable td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+#gpaTable input {
+    width: 100%;
+    padding: 8px;
+    text-align: center;
+    font-size: 16px;
+}
+
+/* Increase input box size for GPA & Credit Hours */
+.subjectGPA, .subjectCredit {
+    width: 95%;
+    padding: 8px;
+    font-size: 16px;
+}
+
+/* Remove number input arrows */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+button {
+    background-color: green;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: darkgreen;
+}
+
+/* CGPA Result Box */
+#cgpaResult {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    background: #f0f0f0;
+}
+

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Silver Calculator</title>
+
+<style>
+    :root {
+        --bg: #0f172a;
+        --card: #1e293b;
+        --accent: #38bdf8;
+        --accent-soft: #0ea5e9;
+        --text: #e5e7eb;
+        --muted: #94a3b8;
+        --success: #22c55e;
+        --danger: #ef4444;
+    }
+
+    body {
+        margin: 0;
+        font-family: "Segoe UI", system-ui, sans-serif;
+        background: #09115c;
+        color: var(--text);
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    .container {
+        max-width: 900px;
+        width: 100%;
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: var(--accent);
+        letter-spacing: 1px;
+        font-family: Mono cursive;
+        color: #c4180c;
+    }
+
+    .card {
+        background: var(--card);
+        border-radius: 16px;
+        padding: 20px;
+        margin-bottom: 20px;
+        box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    }
+
+    .tabs {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+
+    .tab {
+        flex: 1;
+        padding: 12px;
+        border-radius: 12px;
+        border: none;
+        cursor: pointer;
+        background: #334155;
+        color: var(--text);
+        font-size: 16px;
+        transition: 0.3s;
+    }
+
+    .tab.active {
+        background: var(--accent);
+        color: #020617;
+        font-weight: 600;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 15px;
+    }
+
+    label {
+        font-size: 14px;
+        color: var(--muted);
+        margin-bottom: 5px;
+        display: block;
+    }
+
+    input {
+        width: 100%;
+        padding: 10px;
+        border-radius: 10px;
+        border: none;
+        outline: none;
+        font-size: 15px;
+        background: #020617;
+        color: var(--text);
+    }
+
+    input::placeholder {
+        color: #64748b;
+    }
+
+    .btn {
+        margin-top: 15px;
+        width: 100%;
+        padding: 12px;
+        border-radius: 12px;
+        border: none;
+        background: linear-gradient(135deg, var(--accent), var(--accent-soft));
+        color: #020617;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .btn:hover {
+        opacity: 0.9;
+    }
+
+    .result {
+        margin-top: 20px;
+        padding: 15px;
+        border-radius: 12px;
+        background: #020617;
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    .profit {
+        color: var(--success);
+        font-weight: 600;
+    }
+
+    .loss {
+        color: var(--danger);
+        font-weight: 600;
+    }
+
+    @media (max-width: 600px) {
+        h1 {
+            font-size: 22px;
+        }
+    }
+</style>
+</head>
+
+<body>
+<div class="container">
+
+    <h1>Silver Calculator</h1>
+
+    <div class="card">
+        <div class="tabs">
+            <button class="tab active" onclick="showTab('buy')">Buy</button>
+            <button class="tab" onclick="showTab('sell')">Sell</button>
+        </div>
+
+        <!-- BUY SECTION -->
+        <div id="buy">
+            <div class="grid">
+                <div>
+                    <label>Silver Price (Rs per Tola)</label>
+                    <input type="number" id="buyPrice" placeholder="e.g. 5920">
+                </div>
+
+                <div>
+                    <label>Amount (Rs)</label>
+                    <input type="number" id="buyAmount" placeholder="e.g. 500000">
+                </div>
+
+                <div>
+                    <label>Quantity (Tola)</label>
+                    <input type="number" id="buyTola" placeholder="e.g. 10">
+                </div>
+            </div>
+
+            <button class="btn" onclick="calculateBuy()">Calculate Buy</button>
+
+            <div class="result" id="buyResult">
+                Result will appear here.
+            </div>
+        </div>
+
+        <!-- SELL SECTION -->
+        <div id="sell" style="display:none;">
+            <div class="grid">
+                <div>
+                    <label>Purchased Quantity (Tola)</label>
+                    <input type="number" id="sellQty" placeholder="e.g. 84.46">
+                </div>
+
+                <div>
+                    <label>Purchase Price (Rs per Tola)</label>
+                    <input type="number" id="purchasePrice" placeholder="e.g. 5920">
+                </div>
+
+                <div>
+                    <label>Selling Price (Rs per Tola)</label>
+                    <input type="number" id="sellingPrice" placeholder="e.g. 6500">
+                </div>
+            </div>
+
+            <button class="btn" onclick="calculateSell()">Calculate Profit / Loss</button>
+
+            <div class="result" id="sellResult">
+                Result will appear here.
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+function showTab(tab) {
+    document.getElementById('buy').style.display = tab === 'buy' ? 'block' : 'none';
+    document.getElementById('sell').style.display = tab === 'sell' ? 'block' : 'none';
+
+    document.querySelectorAll('.tab').forEach(btn => btn.classList.remove('active'));
+    event.target.classList.add('active');
+}
+
+function calculateBuy() {
+    const price = parseFloat(document.getElementById('buyPrice').value);
+    const amount = parseFloat(document.getElementById('buyAmount').value);
+    const tola = parseFloat(document.getElementById('buyTola').value);
+
+    let result = "";
+
+    if (price && amount) {
+        const qty = amount / price;
+        result = `With Rs ${amount.toLocaleString()}, you can buy <b>${qty.toFixed(2)} tola</b> of silver.`;
+    } 
+    else if (price && tola) {
+        const cost = price * tola;
+        result = `To buy <b>${tola} tola</b>, you need <b>Rs ${cost.toLocaleString()}</b>.`;
+    } 
+    else {
+        result = "Please enter Silver Price and either Amount or Quantity.";
+    }
+
+    document.getElementById('buyResult').innerHTML = result;
+}
+
+function calculateSell() {
+    const qty = parseFloat(document.getElementById('sellQty').value);
+    const buyPrice = parseFloat(document.getElementById('purchasePrice').value);
+    const sellPrice = parseFloat(document.getElementById('sellingPrice').value);
+
+    if (!qty || !buyPrice || !sellPrice) {
+        document.getElementById('sellResult').innerHTML = "Please fill all fields.";
+        return;
+    }
+
+    const cost = qty * buyPrice;
+    const revenue = qty * sellPrice;
+    const profit = revenue - cost;
+
+    let outcome = profit >= 0
+        ? `<span class="profit">Profit: Rs ${profit.toLocaleString()}</span>`
+        : `<span class="loss">Loss: Rs ${Math.abs(profit).toLocaleString()}</span>`;
+
+    document.getElementById('sellResult').innerHTML = `
+        Total Purchase Cost: Rs ${cost.toLocaleString()} <br>
+        Total Selling Value: Rs ${revenue.toLocaleString()} <br>
+        ${outcome}
+    `;
+}
+</script>
+
+</body>
+</html>

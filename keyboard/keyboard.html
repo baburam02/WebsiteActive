@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale-1.0">
+    <title>keyboard</title>
+    <link rel="stylesheet" href="KEYBOARD.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="A Simple Analog Clock">
+    <meta name="theme-color" content="#091921">
+    <link rel="shortcut icon" type="image/png" href="favicon.png" />
+
+
+
+
+<div class="toggleClass" onclick="toggleClass()"></div></tr>
+
+<radio class="time" 
+onclick="document.getElementById('demo').innerHTML = Date()">  <input type="checkbox" name=""  > time
+
+<p id="demo" class="demo"></p></radio>
+
+
+</head>
+
+<body>
+
+    
+    <div class="container">
+        <div class="display" id="display">
+            <!-- <input type="text" name="" id="display"> -->
+        </div>
+        <div class="key-boards">
+            <div class="inner-key">
+                <div class="column one">
+                    <button class="esc">esc</button>
+                    <button>?<sup>f1</sup></button>
+                    <button>
+                        <ion-icon name="ios-sunny"></ion-icon><sup>f2</sup>
+                    </button>
+                    <button>
+                        <ion-icon name="md-sunny"></ion-icon><sup>f3</sup>
+                    </button>
+                    <button>
+                        <ion-icon name="screen"></ion-icon><sup>f4</sup>
+                    </button>
+                    <button>
+                        <ion-icon name="ios-fastbackward"></ion-icon><sup>f5</sup>
+                    </button>
+                    <button>
+                        <ion-icon name="ios-skip-forward"></ion-icon><sup>f6</sup>
+                    </button>
+                    <button>
+                        <ion-icon name="ios-square"></ion-icon><sup>f7</sup>
+                    </button>
+                    <button>
+                        <ion-icon name="ios-fastforward"></ion-icon><sup>f8</sup>
+                    </button>
+                    <button>
+                        <ion-icon name="md-volume-low"></ion-icon><sup>f9</sup>
+                    </button>
+                    <button>
+                        <ion-icon name="md-volume-high"></ion-icon><sup>f10</sup>
+                    </button>
+                    <button>
+                        <ion-icon name="md-volume-off"></ion-icon><sup>f11</sup>
+                    </button>
+                    <button>
+                        <ion-icon name="ios-Podcast"></ion-icon></span><sup>f12</sup>
+                    </button>
+                    <button>prt<sup>ins</sup></button>
+                    <button>paus</button>
+                    <button>delet</button>
+                </div>
+
+                <div class="column two">
+                    <button onclick="funcSc1()" class="button1">`<sup>~</sup></button>
+                    <button onclick="func1()">1<sup>!</sup></button>
+                    <button onclick="func2()">2<sup>@</sup></button>
+                    <button onclick="func3()">3<sup>#</sup></button>
+                    <button onclick="func4()">4<sup>$</sup></button>
+                    <button onclick="func5()">5<sup>%</sup></button>
+                    <button onclick="func6()">6<sup>^</sup></button>
+                    <button onclick="func7()">7<sup>&</sup></button>
+                    <button onclick="func8()">8<sup>*</sup></button>
+                    <button onclick="func9()">9<sup>(</sup></button>
+                    <button onclick="func0()">0<sup>)</sup></button>
+                    <button onclick="funcSc2()">_<sup>-</sup></button>
+                    <button class="button">=<sup>+</sup></button>
+                    <button onclick="funcDel()" class="back">BackSpace</button>
+                    <button>home</button>
+                </div>
+
+                <div class="column three">
+                    <button onclick="funcTab()" class="tab">tab</button>
+                    <button id="btnq" onclick="funcq()">q<sup></sup></button>
+                    <button id="btnw" onclick="funcw()">w<sup></sup></button>
+                    <button id="btne" onclick="funce()">e<sup></sup></button>
+                    <button id="btnr" onclick="funcr()">r<sup></sup></button>
+                    <button id="btnt" onclick="funct()">t<sup></sup></button>
+                    <button id="btny" onclick="funcy()">y<sup></sup></button>
+                    <button id="btnu" onclick="funcu()">u<sup></sup></button>
+                    <button id="btni" onclick="funci()">i<sup></sup></button>
+                    <button id="btno" onclick="funco()">o<sup></sup></button>
+                    <button id="btnp" onclick="funcp()">p<sup></sup></button>
+                    <button onclick="funcSc3()">[<sup>{</sup></button>
+                    <button onclick="funcSc4()">]<sup>}</sup></button>
+                    <button onclick="funcSc5()" class="slace">\<sup>|</sup></button>
+                    <button>pgup</button>
+                </div>
+
+                <div class="column four">
+                    <button onclick="funcCL()" class="cap">capsk<sup>|</sup></button>
+                    <button id="btna" onclick="funca()" class="">a<sup></sup></button>
+                    <button id="btns" onclick="funcs()" class="key">s<sup></sup></button>
+                    <button id="btnd" onclick="funcd()" class="key">d<sup></sup></button>
+                    <button id="btnf" onclick="funcf()" class="key">f<sup></sup></button>
+                    <button id="btng" onclick="funcg()" class="key">g<sup></sup></button>
+                    <button id="btnh" onclick="funch()" class="key">h<sup></sup></button>
+                    <button id="btnj" onclick="funcj()" class="key">j<sup></sup></button>
+                    <button id="btnk" onclick="funck()" class="key">k<sup></sup></button>
+                    <button id="btnl" onclick="funcl()" class="key">l<sup></sup></button>
+                    <button onclick="funcSc6()" class="key">;<sup>:</sup></button>
+                    <button onclick="funcSc7()" class="key">'<sup>"</sup></button>
+                    <button type="" textname onclick="funcEnter()" class="enter">Enter<ion-icon name="ios-return-left">
+                        </ion-icon> </button>
+                    <button>pgdn</button>
+                </div>
+
+                <div class="column five">
+                    <button onclick="funcClear()" class="Shift">Clear</button>
+                    <button id="btnz" onclick="funcz()" class="key">z<sup></sup></button>
+                    <button id="btnx" onclick="funcx()" class="key">x<sup></sup></button>
+                    <button id="btnc" onclick="funcc()" class="key">c<sup></sup></button>
+                    <button id="btnv" onclick="funcv()" class="key">v<sup></sup></button>
+                    <button id="btnb" onclick="funcb()" class="key">b<sup></sup></button>
+                    <button id="btnn" onclick="funcn()" class="key">n<sup></sup></button>
+                    <button id="btnm" onclick="funcm()" class="key">m<sup></sup></button>
+                    <button onclick="funcSc8()" class="key">,<sup>
+                            < </sup></button>
+                    <button onclick="funcDot()" class="key">.<sup>></sup></button>
+                    <button onclick="funcSc9()" class="key">/<sup>?</sup></button>
+                    <button id="shift" onclick="funcShift()" class="shifta"><span>?</span>&nbsp;shift</button>
+                    <button>
+                        <ion-icon name="ios-arrow-up"></ion-icon>
+                    </button>
+                    <button class="end">end</button>
+                </div>
+
+                <div class="column six">
+                    <button class="Ctrl">Ctrl</button>
+                    <button class="fn">fn</button>
+                    <button>
+                        <ion-icon name="logo-windows"></ion-icon>
+                    </button>
+                    <button class="alt">Alt</button>
+                    <button id="space" onclick="funcSpace()" class="Space">Space</button>
+                    <button class="alt">Alt</button>
+                    <button>
+                        <ion-icon name="logo-windows"></ion-icon>
+                    </button>
+                    <button class="ctrl">Ctrl</button>
+                    <button>
+                        <ion-icon name="ios-arrow-back"></ion-icon>
+                    </button>
+                    <button>
+                        <ion-icon name="ios-arrow-down"></ion-icon>
+
+                    </button>
+                    <button>
+                        <ion-icon name="ios-arrow-forward"></ion-icon>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    
+</script>
+<script src="https://unpkg.com/ionicons@4.2.4/dist/ionicons.js"></script>
+<!-- JavaScript Area -->
+<script type="text/javascript" src="KEYBOARD.js"></script>
+<script type="text/javascript" src="KEYEVENT.js"></script>
+
+</html>

@@ -1,0 +1,429 @@
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: rgb(0, 137, 150);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+  background: rgba(0, 137, 150, 0.7);
+}
+
+/* Track */
+::-webkit-scrollbar {
+  width: 13px;
+  height: 8px;
+}
+/*
+
+*/
+
+
+body {
+          
+
+         background: #090909;
+    background: #07141b;
+    padding-top: 2px;
+          }
+body.light {
+  background: #d1dae3;
+}
+
+/* subcribe button start */
+.subscribe {
+  text-align: center;
+  align-items: center;
+  background: #c00;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 7px 15px;
+  border-radius: 6px;
+  font-family: arial;
+  font-size: 16px;
+  box-shadow: 1px 2px 6px #0005;
+  text-decoration: none;
+  position: relative;
+  
+}
+/* subcribe button end */
+
+.container {
+  width: 970px;
+  margin: 160PX;
+}
+
+.container3 {
+  display: flex;
+  width: 100%;
+  position: relative;
+  color: yellow;
+}
+
+.container5 {
+  display: flex;
+  border: solid;
+  object-fit: cover;
+  top: 0%;
+  width: 100%;
+  border-width: 1px;
+  height: 100px;
+}
+
+.two,
+.three,
+.four,
+.five,
+.six {
+  margin: 1px;
+}
+
+button {
+  color: #fff;
+  width: 55px;
+  height: 51px;
+  background: #000;
+  outline-style: none;
+  font-family: arial;
+  border-radius: 6px;
+  text-transform: unset;
+  cursor: pointer;
+}
+.one button{
+  margin-top: 10px;
+}
+button.btn{
+  text-transform:uppercase;
+}
+#btna.clicked,
+#btnb.clicked,
+#btnc.clicked,
+#btnd.clicked,
+#btne.clicked,
+#btnf.clicked,
+#btng.clicked,
+#btnh.clicked,
+#btni.clicked,
+#btnj.clicked,
+#btnk.clicked,
+#btnl.clicked,
+#btnm.clicked,
+#btnn.clicked,
+#btno.clicked,
+#btnp.clicked,
+#btnq.clicked,
+#btnr.clicked,
+#btns.clicked,
+#btnt.clicked,
+#btnu.clicked,
+#btnv.clicked,
+#btnw.clicked,
+#btnx.clicked,
+#btny.clicked,
+#btnz.clicked
+{
+  filter: invert(1);
+}
+#shift{
+  width: 110px;
+}
+#space{
+  width: 345px;
+}
+#shift.clicked
+{
+  width: 110px;
+  filter: invert(1);
+}
+#space.clicked{
+  width: 345px;
+  filter: invert(1);
+}
+.display {
+  border: 1px solid rgb(0, 0, 0);
+  outline: none;
+  margin-top: 10px;
+  color: white;
+  letter-spacing: 2px;
+  font-family: fantasy;
+  margin-left: 0px;
+}
+.display {
+  height: 200px;
+  width: 930px;
+  padding: 10px;
+  display: flex;
+  font-size: 40px;
+  overflow-y: scroll;
+  border-radius: 6px;
+  border-top: 20px solid rgb(0, 0, 0);
+  border-left: 10px solid rgb(0, 0, 0);
+  border-right: 10px solid rgb(0, 0, 0);
+  border-bottom: 10px solid rgb(0, 0, 0);
+  box-shadow: inset 2px 2px 5px #0002, inset -2px -2px 5px #fff;
+ /* background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
+            linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
+            linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
+*/
+  background-color: #000;
+}
+.key-boards{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px 2px;
+  border-radius: 6px;
+  background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+  border: 2px solid black;
+}
+.inner-key{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 2px 2px;
+  border-radius: 6px;
+  border: none;
+  border: 1px solid black;
+}
+.back {
+  width: 110px;
+}
+
+button.tab {
+  width: 80px;
+}
+button.esc{
+  width: 52px;
+}
+button.slace {
+  width: 87px;
+}
+.cap {
+  width: 98px;
+}
+button.Ctrl{
+  margin-left:0px
+}
+.enter {
+  width: 128px;
+}
+.Shift {
+  width: 115px;
+}
+.shifta {
+  width: 110px;
+}
+
+.Space {
+  width: 345px;
+  height: 50px;
+  padding: 12px;
+}
+
+.pgup {
+  width: 55px;
+}
+
+.pgdn {
+  width: 55px;
+}
+
+.time {
+  width: 50px;
+  height: 25px;
+  margin-left: 183px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  color: #d1dae3;
+  position: absolute;
+  top: 137px;
+}
+.demo {
+  margin-left: 970px;
+}
+
+button:hover,
+.button-press {
+  filter: invert(1);
+}
+.button-3d:active {
+  -webkit-box-shadow: 0px 2px 0px #d35400;
+  -moz-box-shadow: 0px 2px 0px #d35400;
+  box-shadow: 0px 2px 0px #d35400;
+  position: relative;
+  top: 4px;
+}
+
+.toggleClass {
+  position: relative;
+  top: 137px;
+  right: 150px;
+  width: 20px;
+  margin-left: 1120px;
+  height: 20px;
+  font-size: 18px;
+  border-radius: 50%;
+  background: #d1dae3;
+  color: #d1dae3;
+  font-family: "Quicksand", sans-serif;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.toggleClass:before {
+  position: absolute;
+  content: "Light Mode";
+  white-space: nowrap;
+  margin-left: 43px;
+}
+
+body.light .toggleClass {
+  background: #091921;
+  color: #091921;
+  content: "Dark Mode";
+}
+
+body.light .toggleClass:before {
+  content: "Dark Mode";
+  white-space: nowrap;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap");
+
+body.light {
+  background: #d1dae3;
+}
+
+.clock {
+  width: 375px;
+  height: 375px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(clock.png);
+  background-size: cover;
+
+  /* box-shadow: 15px 15px 15px rgba(255, 255, 255, 0.5); */
+  box-shadow: 0em -1.2em 1.2em rgba(255, 255, 255, 0.06),
+    inset 0em -1.2em 1.2em rgba(255, 255, 255, 0.06),
+    0em 1.2em 1.2em rgba(0, 0, 0, 0.3), inset 0em 1.2em 1.2em rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+}
+
+body.light .clock {
+  box-shadow: 0em -1.2em 1.2em rgba(255, 255, 255, 0.3),
+    inset 1em 1em -1em rgba(255, 255, 255, 0.3),
+    0em -1.2em -1.2em rgba(0, 0, 0, 0.5), inset 1em -1em 1em rgba(0, 0, 0, 0.1);
+}
+
+.clock :hover {
+  /* yet to be completed; when hovered, diplay complete information about time, `new Date().toLocaleString();` */
+  cursor: pointer;
+}
+
+/* The small circle int the center */
+.clock:before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background: rgb(255, 255, 255);
+  border-radius: 50%;
+
+  /* The z-index property specifies the stack order of an element.
+    /* An element with greater stack order is always in front of an element with a lower stack order.  */
+  /* Note: z-index only works on positioned elements (position: absolute, position: relative, position: fixed, or position: sticky). */
+  z-index: 10000;
+  /* kept as a high value, since wanted at top */
+}
+
+body.light .clock:before {
+  background: #1a74be;
+}
+
+.clock .hour,
+.clock .min,
+.clock .sec {
+  position: absolute;
+}
+
+/* length of respective arms; */
+.clock .hour,
+.hr {
+  width: 160px;
+  height: 160px;
+}
+
+.clock .min,
+.mn {
+  width: 190px;
+  height: 190px;
+}
+
+.clock .sec,
+.sc {
+  width: 230px;
+  height: 230px;
+}
+
+.hr,
+.mn,
+.sc {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  position: absolute;
+  border-radius: 50%;
+}
+
+.hr:before {
+  content: "";
+  position: absolute;
+  width: 7.5px;
+  height: 80px;
+  background: #f81460;
+  z-index: 10;
+  /* z-index least */
+  border-radius: 2.8px;
+}
+
+.mn:before {
+  content: "";
+  position: absolute;
+  width: 3.5px;
+  height: 100px;
+  background: green;
+  z-index: 11;
+  /* z-index more than hour hand */
+  border-radius: 3px;
+}
+
+body.light .mn:before {
+  background: #091921;
+}
+
+.sc:before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 150px;
+  background: #0075fa80;
+  z-index: 12;
+  /* z-index more than hour minute hand */
+  border-radius: 3px;
+}
+
+.container8 {
+  width: 1025px;
+  position: line;
+  margin-left: 460px;
+  margin-top: 150px;
+}
